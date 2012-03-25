@@ -22,11 +22,12 @@ fastcgi_param  SERVER_NAME        $server_name;
 fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 
 ## PHP only, required if PHP was built with --enable-force-cgi-redirect
-fastcgi_param  REDIRECT_STATUS    200;
+#fastcgi_param  REDIRECT_STATUS    200;
 ## HTTPS 'on' parameter.  This requires Nginx version 1.1.11 or
 ## later. The if_not_empty flag was introduced in 1.1.11.  See:
 ## http://nginx.org/en/CHANGES. If using a version that doesn't
 ## support this comment out the line below.
-fastcgi_param  HTTPS              $https if_not_empty;
+#fastcgi_param  HTTPS              $https if_not_empty;
 ## For Nginx versions below 1.1.11 uncomment the line below after commenting out the above.
+### we're not using https locally so no need for this
 #fastcgi_param  HTTPS            $https;
